@@ -1,0 +1,17 @@
+.logo-container{
+    display:flex;
+    background-color: #19223B;
+    height:20vh;
+    margin:0%;
+}
+nav{
+    background-color: #05FFD2;
+}
+.btn{
+    align-self: flex-end;
+    background-color: #19223B;
+    float:right;
+}
+.navbar-nav{
+    float:left;
+}
