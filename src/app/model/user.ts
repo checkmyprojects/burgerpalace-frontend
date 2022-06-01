@@ -1,6 +1,8 @@
 // Here we define the type of data that we have
 // the type of data we get from the backend
 
+import { Orders } from "./orders";
+
 export interface User{
     id: number;
     name: string;
@@ -10,6 +12,7 @@ export interface User{
     password: string;
     role: string;
     // order
+    order: Orders;
 }
 
 // private Long id;
