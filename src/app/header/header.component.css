@@ -1,16 +1,33 @@
 .logo-container{
     display:flex;
     background-color: #19223B;
-    height:20vh;
-    margin:0%;
+    height:22vh;
+    margin:auto;
+}
+#logo{
+    height:22vh;
 }
 nav{
     background-color: #05FFD2;
+    padding-top: 2vh;
+    padding-left: 3vw;
+    padding-right:3vw;
+    padding-bottom: 2vh;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+.navbar-brand{
+    font-size: 1.5rem;
+}
+.nav-item{
+    padding-left: 6vw;
 }
 .btn{
     align-self: flex-end;
     background-color: #19223B;
-    float:right;
+}
+.btn:hover{
+    background-color: #405CAB;
 }
 .navbar-nav{
     float:left;
