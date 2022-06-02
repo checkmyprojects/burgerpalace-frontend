@@ -6,17 +6,25 @@ import {HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { FoodComponent } from './food/food.component';
 import { HeaderComponent } from './header/header.component';
-
+import { Routes, RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
     FoodComponent,
-    HeaderComponent
+    HeaderComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot([
+      {path: '', pathMatch: 'full', redirectTo:'home'},
+      {path:'home', component:HomeComponent},
+      {path:'burgers', component:FoodComponent}
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
