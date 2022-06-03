@@ -9,12 +9,14 @@ import { HeaderComponent } from './header/header.component';
 import { Routes, RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
+import { CartComponent } from './cart/cart.component';
 @NgModule({
   declarations: [
     AppComponent,
     FoodComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +25,8 @@ import { HomeComponent } from './home/home.component';
     RouterModule.forRoot([
       {path: '', pathMatch: 'full', redirectTo:'home'},
       {path:'home', component:HomeComponent},
-      {path:'burgers', component:FoodComponent}
+      {path:'burgers', component:FoodComponent},
+      {path:'cart', component:CartComponent}
     ])
   ],
   providers: [],
