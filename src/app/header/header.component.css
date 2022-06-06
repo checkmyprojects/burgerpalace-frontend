@@ -32,3 +32,8 @@ nav{
 .navbar-nav{
     float:left;
 }
+
+input{
+    margin-left: 10px;
+    margin-right: 20px;
+}
