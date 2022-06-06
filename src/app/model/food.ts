@@ -13,4 +13,5 @@ export interface Food{
     price: number;
     //order
     order: Orders;
+    img:string;
 }
