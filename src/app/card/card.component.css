@@ -1,0 +1,18 @@
+.container{
+    margin-top:5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:stretch;
+}
+.card{
+    background-color: #EAB223;
+    border-radius: 15%;
+    height: 20vw;
+}
+.btn{
+    background-color: #19223B;
+    border-radius: 15%;
+    justify-content: flex-end;
+    align-self: flex-end;
+}

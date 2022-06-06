@@ -1,0 +1,10 @@
+<div class="container">
+<div *ngFor="let food of foods" class="card text-center" style="width: 18rem;">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{ food.name }}</h5>
+      <p class="card-text">{{food.price}}</p>
+      <a href="#" class="btn btn-primary">Add to cart</a>
+    </div>
+  </div>
+</div>
