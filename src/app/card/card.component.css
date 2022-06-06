@@ -1,0 +1,36 @@
+.container,.row{
+    margin-top:5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+}
+.row{
+    flex-direction: row;
+}
+.card{
+    padding-top: 2.5vh;
+    margin-top: 5vh;
+    background-color: #EAB223;
+    border-radius: 10%;
+    height: fit-content;
+    overflow: hidden;
+}
+.card-img-top{
+    border-radius: 10%;
+}
+.btn{
+    background-color: #19223B;
+    border-radius: 15%;
+    justify-content: flex-end;
+    align-self: flex-end;
+}
+@media  only screen and (min-width : 768px) {
+    .container{
+        flex-direction: row;
+    }
+    .card {
+      display: block;
+      width: 70vw;
+    }
+}
