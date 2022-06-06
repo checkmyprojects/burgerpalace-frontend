@@ -1,5 +1,6 @@
 .container,.row{
     margin-top:5vh;
+    margin-bottom:5vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
