@@ -1,0 +1,40 @@
+.board{
+    margin:10%;
+    width:80vw;
+    height:fit-content;
+    border:5px solid #19223B;
+    padding: 2rem;
+    text-align: center;
+}
+.welcome-header{
+    color: #19223B;
+    font-size: 40px;
+}
+form{
+    margin-top: 6vh;
+}
+.row{
+    margin:1rem;
+}
+label{
+    font-size: 32px;
+}
+.small-label{
+    font-size: 17px;
+}
+input{
+    border-left:none;
+    border-top:none;
+    border-right:none;
+    border-bottom:1px solid #888F85;
+}
+button{
+    background-color:#EAB223;
+    border: #816215;
+    font-size: 2rem;
+    border-radius: 30px;
+}
+button:hover{
+    background-color: #19223B;
+    border: #06090f;
+}
