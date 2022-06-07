@@ -37,3 +37,9 @@ input{
     margin-left: 10px;
     margin-right: 20px;
 }
+
+@media screen and (max-width: 426px) {
+    nav{
+        display: none;
+    }
+}
