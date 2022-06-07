@@ -17,6 +17,7 @@
     padding-bottom: 2%;
 }
 
+
 @media screen and (max-width: 769px) {
     .row{
         margin-top: 10%;
@@ -28,6 +29,7 @@
         width: 100%;
     }
 
+
 }
 
 @media screen and (max-width: 426px) {
@@ -37,5 +39,8 @@
     }
     .img-col{
         display: none;
+    }
+    .btn{
+        margin-top: 5%;
     }
 }
