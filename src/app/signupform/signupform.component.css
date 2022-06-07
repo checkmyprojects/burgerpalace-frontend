@@ -17,7 +17,11 @@ form{
     margin:1rem;
 }
 label{
+    color: #19223B;
     font-size:1.5rem;
+}
+p{
+    color: #19223B; 
 }
 .small-label{
     font-size: 17px;
@@ -27,6 +31,9 @@ input{
     border-top:none;
     border-right:none;
     border-bottom:1px solid #888F85;
+}
+input:focus{
+    box-shadow:none;
 }
 button{
     background-color:#EAB223;

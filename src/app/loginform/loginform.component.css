@@ -15,6 +15,10 @@ form{
 }
 label{
     font-size:1.5rem;
+    color: #19223B;
+}
+p{
+    color: #19223B; 
 }
 .button-container{
     display: flex;
@@ -30,21 +34,37 @@ input{
     border-left:none;
     border-right:none;
     border-top:none;
-    border-bottom: 1px solid #888F85;
+    border-bottom: 2px solid #888F85;
     width: 30vw;
     text-align: center;
+}
+input:focus{
+    box-shadow:none;
+}
+button{
+    font-size: 1.7rem;
 }
 #signup{
     background-color: #19223B;
 }
+#signup:hover{
+    background-color: #405CAB;
+}
 #login{
     background-color: #F91F2C;
+}
+#login:hover{
+    background-color: #EAB223;
+    border: #816215;
 }
 @media screen and (max-width: 700px) {
     .welcome-header{
         font-size: 1.6rem;
     }
+    label{
+        font-size:1.1rem;
+    }
     button{
-        font-size: 1.7rem;
+        font-size: 1.2rem;
     }
 }
