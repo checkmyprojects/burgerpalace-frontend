@@ -1,0 +1,50 @@
+.board{
+    margin:10%;
+    width:80vw;
+    height:fit-content;
+    border:5px solid #19223B;
+    padding: 2rem;
+    text-align: center;
+}
+.welcome-header{
+    color: #19223B;
+    font-size: 2rem;
+}
+form{
+    margin-top: 6vh;
+}
+label{
+    font-size:1.5rem;
+}
+.button-container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+.form-group{
+    align-items: center;
+}
+input{
+    display: block;
+    margin:0 auto;
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    border-bottom: 1px solid #888F85;
+    width: 30vw;
+    text-align: center;
+}
+#signup{
+    background-color: #19223B;
+}
+#login{
+    background-color: #F91F2C;
+}
+@media screen and (max-width: 700px) {
+    .welcome-header{
+        font-size: 1.6rem;
+    }
+    button{
+        font-size: 1.7rem;
+    }
+}

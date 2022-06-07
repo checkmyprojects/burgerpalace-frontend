@@ -14,6 +14,8 @@ import { FooterComponent } from './footer/footer.component';
 import { AdComponent } from './ad/ad.component';
 import { SignupComponent } from './signup/signup.component';
 import { SignupformComponent } from './signupform/signupform.component';
+import { LoginComponent } from './login/login.component';
+import { LoginformComponent } from './loginform/loginform.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,9 @@ import { SignupformComponent } from './signupform/signupform.component';
     FooterComponent,
     AdComponent,
     SignupComponent,
-    SignupformComponent
+    SignupformComponent,
+    LoginComponent,
+    LoginformComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +38,8 @@ import { SignupformComponent } from './signupform/signupform.component';
       {path: '', pathMatch: 'full', redirectTo:'home'},
       {path:'home', component:HomeComponent},
       {path:'burgers', component:FoodComponent},
-      {path:'signup', component:SignupComponent}
+      {path:'signup', component:SignupComponent},
+      {path:'login', component:LoginComponent}
     ])
   ],
   providers: [],
