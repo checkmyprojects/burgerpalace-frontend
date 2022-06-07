@@ -35,6 +35,9 @@ input{
 input:focus{
     box-shadow:none;
 }
+.small-label{
+    margin-top:2rem;
+}
 button{
     background-color:#EAB223;
     border: #816215;
