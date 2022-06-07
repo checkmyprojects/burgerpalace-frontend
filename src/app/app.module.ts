@@ -16,6 +16,7 @@ import { SignupComponent } from './signup/signup.component';
 import { SignupformComponent } from './signupform/signupform.component';
 import { LoginComponent } from './login/login.component';
 import { LoginformComponent } from './loginform/loginform.component';
+import { CartComponent } from './cart/cart.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { LoginformComponent } from './loginform/loginform.component';
     SignupComponent,
     SignupformComponent,
     LoginComponent,
-    LoginformComponent
+    LoginformComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,8 @@ import { LoginformComponent } from './loginform/loginform.component';
       {path:'home', component:HomeComponent},
       {path:'burgers', component:FoodComponent},
       {path:'signup', component:SignupComponent},
-      {path:'login', component:LoginComponent}
+      {path:'login', component:LoginComponent},
+      {path:'cart', component:CartComponent}
     ])
   ],
   providers: [],
