@@ -12,6 +12,8 @@ import { HomeComponent } from './home/home.component';
 import { CardComponent } from './card/card.component';
 import { FooterComponent } from './footer/footer.component';
 import { AdComponent } from './ad/ad.component';
+import { SignupComponent } from './signup/signup.component';
+import { SignupformComponent } from './signupform/signupform.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,9 @@ import { AdComponent } from './ad/ad.component';
     HomeComponent,
     CardComponent,
     FooterComponent,
-    AdComponent
+    AdComponent,
+    SignupComponent,
+    SignupformComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +33,8 @@ import { AdComponent } from './ad/ad.component';
     RouterModule.forRoot([
       {path: '', pathMatch: 'full', redirectTo:'home'},
       {path:'home', component:HomeComponent},
-      {path:'burgers', component:FoodComponent}
+      {path:'burgers', component:FoodComponent},
+      {path:'signup', component:SignupComponent}
     ])
   ],
   providers: [],
