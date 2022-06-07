@@ -21,10 +21,8 @@ label{
 p{
     color: #19223B; 
 }
-.button-container{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 2rem;
+.noAccountText{
+    margin-top: 3rem;
 }
 .form-group{
     align-items: center;
@@ -43,6 +41,9 @@ input:focus{
     box-shadow:none;
 }
 button{
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
     font-size: 1.7rem;
     border-radius: 30px;
     padding: 1rem 2rem 1rem 2rem;
@@ -55,6 +56,7 @@ button{
 }
 #login{
     background-color: #F91F2C;
+    margin-top: 1rem;
 }
 #login:hover{
     background-color: #EAB223;
