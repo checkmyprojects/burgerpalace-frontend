@@ -1,8 +1,9 @@
 .board{
-    margin:10%;
+    margin:7%;
     width:80vw;
     height:fit-content;
     border:5px solid #19223B;
+    border-radius: 30px;
     padding: 2rem;
     text-align: center;
 }
@@ -43,6 +44,8 @@ input:focus{
 }
 button{
     font-size: 1.7rem;
+    border-radius: 30px;
+    padding: 1rem 2rem 1rem 2rem;
 }
 #signup{
     background-color: #19223B;
