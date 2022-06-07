@@ -1,7 +1,7 @@
 <section>
     <div class="board">
-        <h1 class="welcome-header">Bienvenid@ a Burger Palace</h1>
-        <p>Accede con tu cuenta o crea una si aún no la tienes para empezar a disfrutar de nuestras ofertas.</p>
+        <h1 class="welcome-header">Welcome to Burger Palace</h1>
+        <p>Sign in with your account or create one if you don't have one yet to start enjoying our offers.</p>
         <form>
             <div class="row">
                 <div class="col">
@@ -36,16 +36,22 @@
                     <label>Address</label>
                 </div>
                 <div class="col">
-                  <input type="text" class="form-control" placeholder="City" required>
+                  <input type="text" class="form-control" placeholder="Your address" required>
                 </div>
                 <div class="col">
-                    <input type="checkbox" id="privacyInput" name="privacy" value="I accept the terms and conditions" required>
+                    <label>Password</label>
                 </div>
-                <div class="col">
-                    <label class="small-label">I accept the terms and conditions of the privacy policy</label>
+                    <div class="col">
+                  <input type="password" class="form-control" placeholder="Your password" required>
                 </div>
-            </div>
-            <button name="submit" type="submit" class="btn btn-primary">Sign up</button>
+              </div>
+              <div class="row">
+                    <label class="small-label">
+                        <input type="checkbox" id="privacyInput" name="privacy" value="I accept the terms and conditions" required>
+                        I accept the <a href="#">terms and conditions</a> of the privacy policy
+                    </label>
+                </div>
+                <button name="submit" type="submit" class="btn btn-primary">Sign up</button>
         </form>
     </div>
 </section>

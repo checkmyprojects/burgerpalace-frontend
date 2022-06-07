@@ -25,6 +25,8 @@ nav{
 .btn{
     align-self: flex-end;
     background-color: #19223B;
+    border-radius: 30px;
+    padding: 1rem 2rem 1rem 2rem;
 }
 .btn:hover{
     background-color: #405CAB;

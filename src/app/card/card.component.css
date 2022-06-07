@@ -22,7 +22,7 @@
 }
 .btn{
     background-color: #19223B;
-    border-radius: 15%;
+    border-radius: 30px;
     justify-content: flex-end;
     align-self: flex-end;
 }
