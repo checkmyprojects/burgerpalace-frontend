@@ -1,8 +1,9 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { catchError, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Food } from '../model/food';
+import { User } from '../model/user';
 
 @Injectable({
   providedIn: 'root'
@@ -16,4 +17,23 @@ export class FoodService {
   public getAllFood(): Observable<Food[]>{
     return this.http.get<Food[]>(`${this.apiServerUrl}/food/all`);
   }
+  
+  public registerUser(user:User):Observable<User>{
+    return this.http.post<User>(`${this.apiServerUrl}/user/add`, user{
+      headers: new HttpHeaders({
+        'Content-Type':'application/json'
+      })
+    });
+  }
+  public addFood(food:Food):Observable<Food>{
+    return this.http.post<Food>(`${this.apiServerUrl}/food/add`, food{
+      headers: new HttpHeaders({
+        'Content-Type':'application/json'
+      })
+    });
+  }
+  /*
+  public registerUser(user):User{
+    return this.http.post(`${this.apiServerUrl}/user/add`, user);
+  }*/
 }

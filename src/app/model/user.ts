@@ -1,6 +1,7 @@
 // Here we define the type of data that we have
 // the type of data we get from the backend
 
+import { Optional } from "@angular/core";
 import { Orders } from "./orders";
 
 export interface User{
