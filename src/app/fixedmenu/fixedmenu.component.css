@@ -1,3 +1,18 @@
-.navega{
-    box-shadow:  1px -2px 5px rgba(134, 134, 134, 0.403);
+.fixed-bottom{
+    box-shadow: 0px 1px 8px #515151;
+}
+
+.dropdown-item{
+    color: #19223B;
+}
+.nav-link{
+    color: #19223B;
+}
+
+.dropdown-item:hover{
+    color: #EAB223
+}
+
+.nav-link:hover{
+    color: #EAB223
 }
