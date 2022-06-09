@@ -19,21 +19,19 @@ export class FoodService {
   }
   
   public registerUser(user:User):Observable<User>{
-    return this.http.post<User>(`${this.apiServerUrl}/user/add`, user{
-      headers: new HttpHeaders({
-        'Content-Type':'application/json'
-      })
-    });
-  }
-  public addFood(food:Food):Observable<Food>{
-    return this.http.post<Food>(`${this.apiServerUrl}/food/add`, food{
+    return this.http.post<User>(`${this.apiServerUrl}/user/add`, user,{
       headers: new HttpHeaders({
         'Content-Type':'application/json'
       })
     });
   }
   /*
-  public registerUser(user):User{
-    return this.http.post(`${this.apiServerUrl}/user/add`, user);
+  public addFood(food:Food):Observable<Food>{
+    return this.http.post<Food>(`${this.apiServerUrl}/food/add`, food{
+      headers: new HttpHeaders({
+        'Content-Type':'application/json'
+      })
+    });
   }*/
+
 }

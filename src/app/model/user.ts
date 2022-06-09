@@ -5,15 +5,12 @@ import { Optional } from "@angular/core";
 import { Orders } from "./orders";
 
 export interface User{
-    id: number;
+    id?: number;
     name: string;
     address: string;
     email: string;
     phone: string;
     password: string;
-    role: string;
-    // order
-    order: Orders;
 }
 
 // private Long id;
