@@ -19,11 +19,11 @@ export class FoodService {
   }
   
   public registerUser(user:User):Observable<User>{
-    return this.http.post<User>(`${this.apiServerUrl}/user/add`, user)
-    .pipe(
+    return this.http.post<User>(`${this.apiServerUrl}/api/user/save`, user)
+    /*.pipe(
       catchError(this.handleError('registerUser',user))
-    )
-    
+    )*/
+  
   }
   /*
   public addFood(food:Food):Observable<Food>{
