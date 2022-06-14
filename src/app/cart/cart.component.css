@@ -16,7 +16,9 @@
     padding-top: 2%;
     padding-bottom: 2%;
 }
-
+input{
+    width:50%;
+}
 
 @media screen and (max-width: 769px) {
     .row{
@@ -28,9 +30,9 @@
     .columna2{
         width: 100%;
     }
-
-
 }
+
+
 
 @media screen and (max-width: 426px) {
 
@@ -42,5 +44,8 @@
     }
     .btn{
         margin-top: 5%;
+    }
+    input{
+        width:110%;
     }
 }
