@@ -20,7 +20,7 @@ export class SignupformComponent implements OnInit {
     const user : User = {
       name: data.value.name +" " +data.value.surname,
       address: data.value.address,
-      email: data.value.email,
+      username: data.value.email,
       phone: data.value.phone,
       password: data.value.password
     };
@@ -31,7 +31,7 @@ export class SignupformComponent implements OnInit {
     const user : User = {
       name: data.value.name +" " +data.value.surname,
       address: data.value.address,
-      email: data.value.email,
+      username: data.value.email,
       phone: data.value.phone,
       password: data.value.password
         };

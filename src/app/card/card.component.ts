@@ -2,7 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Food } from '../model/food';
 import { FoodService } from '../service/food.service';
-
+import { Cart } from '../model/cart';
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
@@ -10,7 +10,13 @@ import { FoodService } from '../service/food.service';
 })
 export class CardComponent implements OnInit {
   public foods: Food[] = [];
-
+  public cart:Cart[]=[];
+ /* public addToCart(food_id:string, quantity:number){
+    this.cart.push({
+      'food_id':food_id,
+      'quantity':quantity
+    })
+  }*/
   constructor( private foodService: FoodService) { }
 
   ngOnInit(): void {

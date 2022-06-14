@@ -11,4 +11,5 @@ export interface Orders{
     user: User;
     // address: string; // tipo food
     food: Food;
+    quantity: BigInteger;
 }
