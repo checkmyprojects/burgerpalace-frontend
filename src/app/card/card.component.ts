@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Food } from '../model/food';
 import { FoodService } from '../service/food.service';
 import { Cart } from '../model/cart';
+import { CartService } from '../service/cart.service';
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
@@ -17,7 +18,7 @@ export class CardComponent implements OnInit {
       'quantity':quantity
     })
   }*/
-  constructor( private foodService: FoodService) { }
+  constructor( private foodService: FoodService, private cartService:CartService) { }
 
   ngOnInit(): void {
     this.getFoods();
@@ -34,5 +35,9 @@ export class CardComponent implements OnInit {
       }
     })
   }
+  public addItemToCart():void{
+    this.cartService.cart;
+  }
+
 
 }
