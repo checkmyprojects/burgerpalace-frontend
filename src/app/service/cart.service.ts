@@ -16,18 +16,28 @@ import { Food } from '../model/food';
             return;
         }
         this.cart.items.push(new CartItem(food));
+        this.localStorageSaveCart();
         
     }
     removeFromCart(foodId:Number):void{
         this.cart.items=this.cart.items.filter(item=>
             item.food.id !=foodId);
+            this.localStorageSaveCart();
     }
     changeQuantity(foodId:number, quantity:number){
         let cartItem=this.cart.items.find(item=>item.food.id===foodId);
         if(!cartItem) return;
         cartItem.quantity = quantity;
+        this.localStorageSaveCart();
     }
     getCart():Cart{
+        this.localStorageGetCart();
         return this.cart;
+    }
+    localStorageSaveCart(){
+        localStorage.setItem('BurgerPalaceCart',JSON.stringify(this.cart));
+    }
+    localStorageGetCart(){
+        this.cart=JSON.parse(localStorage.getItem('BurgerPalaceCart')||'[]');
     }
   }
