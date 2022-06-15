@@ -17,6 +17,7 @@ import { SignupformComponent } from './signupform/signupform.component';
 import { LoginComponent } from './login/login.component';
 import { LoginformComponent } from './loginform/loginform.component';
 import { CartComponent } from './cart/cart.component';
+import { authInterceptorProviders } from './_helpers/auth.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
