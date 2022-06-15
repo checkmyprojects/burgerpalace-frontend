@@ -1,7 +1,11 @@
 .fixed-bottom{
     box-shadow: 0px 1px 8px #515151;
 }
-
+.nav{
+    display: flex;
+    justify-content: center;
+    margin-left: -25%;
+}
 .dropdown-item{
     color: #19223B;
 }

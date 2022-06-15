@@ -78,8 +78,8 @@ app-fixedmenu{
     }
     /* on the fixedmenu */
     app-fixedmenu{
-        display: block;
-        padding: 0;
+        width: 100%;
+        display:block;
         margin: 0;
     }
 
