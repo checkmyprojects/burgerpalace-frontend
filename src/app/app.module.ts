@@ -46,7 +46,7 @@ import { authInterceptorProviders } from './_helpers/auth.interceptor';
       {path:'cart', component:CartComponent}
     ])
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
