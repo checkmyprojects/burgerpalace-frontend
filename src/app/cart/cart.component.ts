@@ -4,6 +4,7 @@ import { Cart } from '../model/cart';
 import { CartItem } from '../model/cartItem';
 import { Food } from '../model/food';
 
+
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -36,4 +37,11 @@ export class CartComponent implements OnInit {
   console.log(this.cartItem);
   //console.log(this.cart);
 }
+ public getTotalPrice(){
+  let totalPrice=0;
+  this.cartItem.forEach(function (curr){
+    totalPrice += (curr.food.price*curr.quantity);
+  })
+return totalPrice;
+ }
 }

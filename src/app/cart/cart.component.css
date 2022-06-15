@@ -8,6 +8,7 @@
     width: 30%;
     padding-top: 1%;
     padding-bottom: 1%;
+    text-align: right;
 }
 
 .grupo-result{
@@ -16,8 +17,19 @@
     padding-top: 2%;
     padding-bottom: 2%;
 }
-
-
+.name{
+    width:40%;
+    text-align: left;
+}
+.total-price{
+    text-align:center;
+    margin-bottom:2rem;
+}
+.columna2{
+    border:2px solid #19223B;
+    border-radius: 30px;
+    padding: 2rem;
+}
 @media screen and (max-width: 769px) {
     .row{
         margin-top: 10%;
@@ -27,9 +39,8 @@
     }
     .columna2{
         width: 100%;
+        border:none;
     }
-
-
 }
 
 @media screen and (max-width: 426px) {
