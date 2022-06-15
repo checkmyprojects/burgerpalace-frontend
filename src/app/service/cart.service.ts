@@ -40,4 +40,7 @@ import { Food } from '../model/food';
     localStorageGetCart(){
         this.cart=JSON.parse(localStorage.getItem('BurgerPalaceCart')||'[]');
     }
+    localStorageReturnCart(){
+        return JSON.parse(localStorage.getItem('BurgerPalaceCart')||'[]');
+    }
   }

@@ -10,22 +10,30 @@ import { Food } from '../model/food';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  cart! : Cart;
-  constructor(private cartService:CartService) { }
+  public cart:Cart[]=[];
+  cartItem: CartItem[] = [];
 
+  constructor(private cartService:CartService) { }
+  
   ngOnInit(): void {
     this.cartService.localStorageGetCart();
-  }
-  setCart(){
-    this.cart = this.cartService.getCart();
+    this.getCartItems();
   }
   removeFromCart(cartItem:CartItem){
     this.cartService.removeFromCart(cartItem.food.id);
-    this.setCart();
   }
   changeQuantity(cartItem:CartItem,quantityInString:string){
     const quantity = parseInt(quantityInString);
     this.cartService.changeQuantity(cartItem.food.id, quantity);
-    this.setCart;
   }
+  localStorageGetCart(){
+    this.cart=JSON.parse(localStorage.getItem('BurgerPalaceCart')||'[]');
+}
+  public getCartItems(){
+  console.log(JSON.parse(localStorage.getItem('BurgerPalaceCart')||'[]'));
+  //this.cart = JSON.parse(localStorage.getItem('BurgerPalaceCart')||'[]').items;
+  this.cartItem = JSON.parse(localStorage.getItem('BurgerPalaceCart')||'[]').items;
+  console.log(this.cartItem);
+  //console.log(this.cart);
+}
 }
