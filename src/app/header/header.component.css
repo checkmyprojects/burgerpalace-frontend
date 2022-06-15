@@ -39,9 +39,17 @@ input{
     margin-left: 10px;
     margin-right: 20px;
 }
-
+app-fixedmenu{
+    display: none;
+}
 @media screen and (max-width: 426px) {
     nav{
         display: none;
     }
+    app-fixedmenu{
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+
 }
