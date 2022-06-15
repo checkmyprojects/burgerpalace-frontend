@@ -23,6 +23,10 @@ export class CartComponent implements OnInit {
   removeFromCart(cartItem:CartItem){
     this.cartService.removeFromCart(cartItem.food.id);
   }
+  clearCart(){
+    this.cartItem=[];
+    this.cartService.localStorageClear();
+  }
   changeQuantity(cartItem:CartItem,quantityInString:string){
     const quantity = parseInt(quantityInString);
     this.cartService.changeQuantity(cartItem.food.id, quantity);

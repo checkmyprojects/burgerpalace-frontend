@@ -16,7 +16,7 @@
         </ul>
         <!--PRODUCTO1-->
         <ul class="list-group list-group-horizontal" *ngFor="let item of cartItem">
-          <li class="list-group-item border-0 grupo align-self-center img-col"><img src="assets/img/amirali-mirhashemian-88YAXjnpvrM-unsplash.png"></li>
+          <li class="list-group-item border-0 grupo align-self-center img-col"><img class="burger-image" src="{{item.food.img}}"></li>
           <li class="list-group-item name border-0 grupo align-self-left">{{item.food.name}}</li>
           <li class="list-group-item border-0 grupo align-self-right">{{item.food.price}}</li>
           <li class="list-group-item border-0 grupo align-self-right">{{item.quantity}}</li>
@@ -24,8 +24,10 @@
         </ul>
           <p class="total-price"><b>Total: </b>{{getTotalPrice()}}€</p>
         <!--PRODUCTO-pagar-->
-        
+        <div class="button-container">
+        <button type="button" class="btn btn-clear btn-lg btn-outline-dark" (click)="clearCart()">Clear</button>
         <button type="button" class="btn btn-danger btn-lg btn-outline-dark">Buy</button>
+      </div>
       </div>
     </div>
 </div>

@@ -30,6 +30,19 @@
     border-radius: 30px;
     padding: 2rem;
 }
+.burger-image{
+    width:80%;
+}
+.button-container{
+    display:flex;
+    justify-content: space-around;
+}
+.btn-clear{
+    background-color: #05FFD2;
+}
+.btn-clear:hover{
+    background-color: #19223B;
+}
 @media screen and (max-width: 769px) {
     .row{
         margin-top: 10%;
