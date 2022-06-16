@@ -44,6 +44,7 @@ import { Food } from '../model/food';
         return JSON.parse(localStorage.getItem('BurgerPalaceCart')||'[]');
     }
     localStorageClear(){
+        this.cart = new Cart();
         localStorage.removeItem('BurgerPalaceCart');
     }
   }

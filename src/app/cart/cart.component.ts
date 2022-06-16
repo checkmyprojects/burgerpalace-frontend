@@ -25,6 +25,7 @@ export class CartComponent implements OnInit {
   }
   clearCart(){
     this.cartItem=[];
+    this.cart=[];
     this.cartService.localStorageClear();
   }
   changeQuantity(cartItem:CartItem,quantityInString:string){
