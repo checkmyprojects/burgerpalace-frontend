@@ -17,6 +17,10 @@ export class FoodService {
   public getAllFood(): Observable<Food[]>{
     return this.http.get<Food[]>(`${this.apiServerUrl}/api/food`);
   }
+
+  public getFoodByCategoryName(categoryName: string): Observable<Food[]>{
+    return this.http.get<Food[]>(`${this.apiServerUrl}/api/food/filter/${categoryName}`);
+  }
   
   public registerUser(user:User):Observable<User>{
     return this.http.post<User>(`${this.apiServerUrl}/api/users/save`, user)

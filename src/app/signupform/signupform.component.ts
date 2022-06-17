@@ -4,6 +4,7 @@ import { NgForm } from '@angular/forms';
 import { Food } from '../model/food';
 import { User } from '../model/user';
 import { FoodService } from '../service/food.service';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-signupform',
@@ -11,7 +12,18 @@ import { FoodService } from '../service/food.service';
   styleUrls: ['./signupform.component.css']
 })
 export class SignupformComponent implements OnInit {
-  constructor(private foodService: FoodService) { }
+  form: any = {
+    name: null, 
+    address: null, 
+    username: null, 
+    phone: null, 
+    password: null
+  };
+  isSuccessful = false;
+  isSignUpFailed = false;
+  errorMessage = '';
+
+  constructor(private foodService: FoodService, private authService: AuthService) { }
 
   ngOnInit(): void {
   }
@@ -27,6 +39,22 @@ export class SignupformComponent implements OnInit {
 
     console.log(user);
   }
+
+  onSubmit(): void {
+    const { name, address, username, phone, password } = this.form;
+    this.authService.register(name, address, username, phone, password).subscribe({
+      next: data => {
+        console.log(data);
+        this.isSuccessful = true;
+        this.isSignUpFailed = false;
+      },
+      error: err => {
+        this.errorMessage = err.error.message;
+        this.isSignUpFailed = true;
+      }
+    });
+  }
+
   public createUser(data:NgForm): void{
     const user : User = {
       name: data.value.name +" " +data.value.surname,

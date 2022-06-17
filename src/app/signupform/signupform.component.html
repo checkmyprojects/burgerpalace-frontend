@@ -2,13 +2,16 @@
     <div class="board">
         <h1 class="welcome-header">Welcome to Burger Palace</h1>
         <p>Sign in with your account or create one if you don't have one yet to start enjoying our offers.</p>
-        <form #data="ngForm" (ngSubmit)="getUserData(data)" novalidate>
+        <form #data="ngForm" (ngSubmit)="getUserData(data)" name="form"
+        (ngSubmit)="f.form.valid && onSubmit()"
+        #f="ngForm"
+        novalidate>
             <div class="row">
                 <div class="col">
                     <label>Name</label>
                 </div>
                 <div class="col">
-                  <input type="text" class="form-control" id="name" placeholder="Your name" ngModel name="name">
+                  <input type="text" class="form-control" id="name" placeholder="Your name" ngModel name="name" [(ngModel)]="form.name">
                 </div>
                 <div class="col">
                     <label>Surname</label>
@@ -22,13 +25,13 @@
                     <label>Phone number</label>
                 </div>
                 <div class="col">
-                    <input type="text" class="form-control" id="phoneNumber" placeholder="Your phone number" required ngModel name="phone">
+                    <input type="text" class="form-control" id="phoneNumber" placeholder="Your phone number" required ngModel name="phone" [(ngModel)]="form.phone">
                 </div>
                 <div class="col">
                     <label>Email</label>
                 </div>
                     <div class="col">
-                  <input type="email" class="form-control" id="email" placeholder="youremail@email.com" required ngModel name="email">
+                  <input type="email" class="form-control" id="email" placeholder="youremail@email.com" required ngModel name="email" [(ngModel)]="form.username">
                 </div>
             </div>
             <div class="row">
@@ -36,13 +39,13 @@
                     <label>Address</label>
                 </div>
                 <div class="col">
-                  <input type="text" class="form-control" id="address"placeholder="Your address" required ngModel name="address">
+                  <input type="text" class="form-control" id="address"placeholder="Your address" required ngModel name="address" [(ngModel)]="form.address">
                 </div>
                 <div class="col">
                     <label>Password</label>
                 </div>
                     <div class="col">
-                  <input type="password" class="form-control" id="password" placeholder="Your password" required ngModel name="password">
+                  <input type="password" class="form-control" id="password" placeholder="Your password" required ngModel name="password" [(ngModel)]="form.password">
                 </div>
               </div>
               <div class="row">
