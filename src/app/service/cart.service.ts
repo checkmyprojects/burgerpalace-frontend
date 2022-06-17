@@ -45,6 +45,8 @@ import { Food } from '../model/food';
     }
     localStorageClear(){
         this.cart = new Cart();
-        localStorage.removeItem('BurgerPalaceCart');
+        console.log(this.cart);
+        localStorage.setItem('BurgerPalaceCart',JSON.stringify(''));
+        //localStorage.removeItem('BurgerPalaceCart');
     }
   }

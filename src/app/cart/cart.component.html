@@ -25,8 +25,8 @@
           <p class="total-price"><b>Total: </b>{{getTotalPrice()}}€</p>
         <!--PRODUCTO-pagar-->
         <div class="button-container">
-        <button type="button" class="btn btn-clear btn-lg btn-outline-dark" (click)="clearCart()">Clear</button>
-        <button type="button" class="btn btn-danger btn-lg btn-outline-dark">Buy</button>
+        <button *ngIf="cart !=[] || cart.length != undefined" type="button" class="btn btn-clear btn-lg btn-outline-dark" (click)="clearCart()">Clear</button>
+        <button *ngIf="cart !=[]" type="button" class="btn btn-danger btn-lg btn-outline-dark" (click)="checkout()">Buy</button>
       </div>
       </div>
     </div>
