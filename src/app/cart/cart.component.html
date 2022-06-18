@@ -7,7 +7,7 @@
       </div>
       <div class="col text-center align-self-center columna2">
         <!--PRODUCTO-name-->
-        <ul class="list-group list-group-horizontal">
+        <ul *ngIf="!isCheckout" class="list-group list-group-horizontal">
           <li class="list-group-item border-0 grupo align-self-center img-col"></li>
           <li class="list-group-item name border-0 grupo align-self-center fw-bold">Name</li>
           <li class="list-group-item border-0 grupo align-self-center fw-bold">Price</li>
@@ -22,12 +22,19 @@
           <li class="list-group-item border-0 grupo align-self-right">{{item.quantity}}</li>
           <li class="list-group-item border-0 grupo align-self-right">{{item.food.price*item.quantity}}</li>
         </ul>
-          <p class="total-price"><b>Total: </b>{{getTotalPrice()}}€</p>
+        <p *ngIf="!isCheckout" class="total-price"><b>Total: </b>{{getTotalPrice()}}€</p>
         <!--PRODUCTO-pagar-->
-        <div class="button-container">
-        <button *ngIf="cart !=[] || cart.length != undefined" type="button" class="btn btn-clear btn-lg btn-outline-dark" (click)="clearCart()">Clear</button>
-        <button *ngIf="cart !=[]" type="button" class="btn btn-danger btn-lg btn-outline-dark" (click)="checkout()">Buy</button>
-      </div>
+        <div *ngIf="!isCheckout" class="button-container">
+          <button *ngIf="cartItem.length > 0" type="button" class="btn btn-clear btn-lg btn-outline-dark" (click)="clearCart()">Clear</button>
+          <button *ngIf="cartItem.length > 0 && isLoggedIn" type="button" class="btn btn-danger btn-lg btn-outline-dark" (click)="checkout()">Buy</button>
+          <button *ngIf="cartItem.length > 0 && !isLoggedIn" type="button" class="btn btn-danger btn-lg btn-outline-dark" routerLink="/login">Login</button>
+        </div>
+        <div *ngIf="isCheckout" class="container">
+          <!-- versión de escritorio y tablet -->
+          <div class="row">
+            <h4>Payment received. Enjoy your food!</h4>
+          </div>
+        </div>
       </div>
     </div>
 </div>

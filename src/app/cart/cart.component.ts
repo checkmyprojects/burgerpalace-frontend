@@ -5,6 +5,7 @@ import { CartItem } from '../model/cartItem';
 import { Food } from '../model/food';
 import { FoodService } from '../service/food.service';
 import { HttpErrorResponse } from '@angular/common/http';
+import { TokenStorageService } from '../service/token-storage.service';
 
 
 @Component({
@@ -16,10 +17,23 @@ export class CartComponent implements OnInit {
   public cart:Cart[]=[];
   cartItem: CartItem[] = [];
 
-  constructor(private cartService:CartService, private foodService:FoodService) { }
+  isLoggedIn = false;
+  username?: string;
+
+  isCheckout: boolean = false;
+
+  constructor(private cartService:CartService, private foodService:FoodService, private tokenStorageService: TokenStorageService) { }
   
   ngOnInit(): void {
-    this.cartService.localStorageGetCart();
+
+    this.isLoggedIn = !!this.tokenStorageService.getToken();
+    if (this.isLoggedIn) {
+      const user = this.tokenStorageService.getUser();
+
+      this.username = user.username;
+    }
+
+    //this.cartService.localStorageGetCart();
     this.getCartItems();
   }
   removeFromCart(cartItem:CartItem){
@@ -31,6 +45,11 @@ export class CartComponent implements OnInit {
     this.cartService.localStorageClear();
     console.log(this.cart.length);
   }
+  checkout2():void{
+    this.isCheckout = true;
+    console.log(this.isCheckout);
+    this.clearCart();
+  }
   changeQuantity(cartItem:CartItem,quantityInString:string){
     const quantity = parseInt(quantityInString);
     this.cartService.changeQuantity(cartItem.food.id, quantity);
@@ -41,7 +60,8 @@ export class CartComponent implements OnInit {
     console.log("Cart Component before Service Call");
     this.foodService.checkout(this.cartItem).subscribe({
       next: (response: CartItem[]) => {
-        
+        this.isCheckout = true;
+        this.clearCart();
         console.log(response);
       },
       error: (error: HttpErrorResponse) => {
@@ -52,13 +72,19 @@ export class CartComponent implements OnInit {
 
   localStorageGetCart(){
     this.cart=JSON.parse(localStorage.getItem('BurgerPalaceCart')||'[]');
+    
 }
   public getCartItems(){
-  console.log(JSON.parse(localStorage.getItem('BurgerPalaceCart')||'[]'));
+  // console.log(JSON.parse(localStorage.getItem('BurgerPalaceCart')||'[]'));
   //this.cart = JSON.parse(localStorage.getItem('BurgerPalaceCart')||'[]').items;
-  this.cartItem = JSON.parse(localStorage.getItem('BurgerPalaceCart')||'[]').items;
-  console.log(this.cartItem);
-  //console.log(this.cart);
+  //this.cartItem = JSON.parse(localStorage.getItem('BurgerPalaceCart')||'[]').items;
+  if(JSON.parse(localStorage.getItem('BurgerPalaceCart')||'[]').items){
+    this.cartItem = JSON.parse(localStorage.getItem('BurgerPalaceCart')||'[]').items;
+  }
+  // console.log(this.cartItem);
+  // console.log("Function")
+  // console.log(this.cartItem.length)
+  // //console.log(this.cart);
 }
  public getTotalPrice(){
    let totalPrice=0;

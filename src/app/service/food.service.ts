@@ -44,7 +44,7 @@ export class FoodService {
     // console.log("CartToBackend: ");
     // console.log(cartToBackend);
     // return this.http.post<OrderToBackend[]>(`${this.apiServerUrl}/api/orders/3/checkout`, cartToBackend);
-    return this.http.post<CartItem[]>(`${this.apiServerUrl}/api/orders/3/checkout`, order);
+    return this.http.post<CartItem[]>(`${this.apiServerUrl}/api/orders/checkout`, order);
   }
 
   public registerUser(user:User):Observable<User>{

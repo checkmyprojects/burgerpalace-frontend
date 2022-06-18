@@ -5,6 +5,7 @@ import { Food } from '../model/food';
 import { User } from '../model/user';
 import { FoodService } from '../service/food.service';
 import { AuthService } from '../service/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signupform',
@@ -23,7 +24,7 @@ export class SignupformComponent implements OnInit {
   isSignUpFailed = false;
   errorMessage = '';
 
-  constructor(private foodService: FoodService, private authService: AuthService) { }
+  constructor(private foodService: FoodService, private authService: AuthService, public router: Router) { }
 
   ngOnInit(): void {
   }
@@ -53,6 +54,7 @@ export class SignupformComponent implements OnInit {
         this.isSignUpFailed = true;
       }
     });
+    this.router.navigate(['/login']);
   }
 
   public createUser(data:NgForm): void{

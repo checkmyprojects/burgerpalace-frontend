@@ -21,7 +21,8 @@
           </ul>
         </div>
         
-          <input class="btn btn-primary" type="button" value="Login" routerLink="/login">
+          <input *ngIf="!isLoggedIn" class="btn btn-primary" type="button" value="Login" routerLink="/login">
+          <input *ngIf="isLoggedIn" class="btn btn-primary" type="button" value="Logout" (click)="logout()" routerLink="/home">
         
         <!-- icono de carrito -->
           <a href="/cart"><img src="assets/img/carrito.png"></a>
