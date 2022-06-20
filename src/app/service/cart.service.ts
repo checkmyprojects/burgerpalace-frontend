@@ -10,7 +10,7 @@ import { Food } from '../model/food';
   export class CartService {
     public cart:Cart = new Cart();
     public addToCart(food:Food):void{
-        //this.localStorageGetCart();
+        this.localStorageGetCart();
         console.log(this.cart);
         let cartItem= this.cart.items.find(item=>item.food.id===food.id);
         if(cartItem){
@@ -44,6 +44,9 @@ import { Food } from '../model/food';
         localStorage.setItem('BurgerPalaceCart',JSON.stringify(this.cart));
     }
     localStorageGetCart(){
+        if(JSON.parse(localStorage.getItem('BurgerPalaceCart')||'[]') === ''){
+            return;
+        }
         this.cart=JSON.parse(localStorage.getItem('BurgerPalaceCart')||'[]');
     }
     localStorageReturnCart(){
