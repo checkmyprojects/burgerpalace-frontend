@@ -11,8 +11,8 @@ import { Food } from '../model/food';
     public cart:Cart = new Cart();
     public addToCart(food:Food):void{
         this.localStorageGetCart();
-        let cartItem= this.cart.items.find(item=>item.food.id===food.id)
-        
+        console.log(this.cart);
+        let cartItem= this.cart.items.find(item=>item.food.id===food.id);
         if(cartItem){
             this.changeQuantity(food.id, cartItem.quantity+1)
             return;

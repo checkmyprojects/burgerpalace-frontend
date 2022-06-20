@@ -53,7 +53,9 @@ export class CartComponent implements OnInit {
   changeQuantity(cartItem:CartItem,quantityInString:string){
     const quantity = parseInt(quantityInString);
     this.cartService.changeQuantity(cartItem.food.id, quantity);
+    this.getCartItems();
     this.getTotalPrice();
+    console.log(this.totalValue);
   }
 
   checkout(): void{
