@@ -17,6 +17,7 @@
     padding-top: 2%;
     padding-bottom: 2%;
 }
+/*    */
 .name{
     width:40%;
     text-align: left;
@@ -43,6 +44,11 @@
 .btn-clear:hover{
     background-color: #19223B;
 }
+/*    */
+input{
+    width:50%;
+}
+
 @media screen and (max-width: 769px) {
     .row{
         margin-top: 10%;
@@ -56,6 +62,8 @@
     }
 }
 
+
+
 @media screen and (max-width: 426px) {
 
     .col{
@@ -66,5 +74,8 @@
     }
     .btn{
         margin-top: 5%;
+    }
+    input{
+        width:110%;
     }
 }
