@@ -33,6 +33,10 @@
 .burger-image{
     width:80%;
 }
+.removeItemBtn{
+    background-color: transparent;
+    border:none;
+}
 .button-container{
     display:flex;
     justify-content: space-around;
