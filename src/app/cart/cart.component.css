@@ -37,6 +37,9 @@
     background-color: transparent;
     border:none;
 }
+.quantity-input{
+    width:2rem;
+}
 .button-container{
     display:flex;
     justify-content: space-around;

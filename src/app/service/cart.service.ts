@@ -29,10 +29,12 @@ import { Food } from '../model/food';
             window.location.reload();
     }
     changeQuantity(foodId:number, quantity:number){
+        this.localStorageGetCart();
         let cartItem=this.cart.items.find(item=>item.food.id===foodId);
         if(!cartItem) return;
         cartItem.quantity = quantity;
         this.localStorageSaveCart();
+        //window.location.reload();
     }
     getCart():Cart{
         this.localStorageGetCart();
@@ -53,4 +55,5 @@ import { Food } from '../model/food';
         localStorage.setItem('BurgerPalaceCart',JSON.stringify(''));
         //localStorage.removeItem('BurgerPalaceCart');
     }
+
   }
