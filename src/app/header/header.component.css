@@ -43,7 +43,13 @@ app-fixedmenu{
     display: none;
 }
 @media screen and (max-width: 426px) {
-    
+    .logo-container{
+        display: flex;
+        justify-content: center;
+    }
+    #logo{
+        padding: 2px;
+    }
     nav{
         padding: 1 2 1 2 px;
         display: flex;
