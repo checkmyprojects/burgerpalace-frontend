@@ -16,7 +16,7 @@ import { TokenStorageService } from '../service/token-storage.service';
 export class CartComponent implements OnInit {
   public cart:Cart[]=[];
   cartItem: CartItem[] = [];
-
+  totalValue:number= 0;
   isLoggedIn = false;
   username?: string;
 
@@ -25,7 +25,6 @@ export class CartComponent implements OnInit {
   constructor(private cartService:CartService, private foodService:FoodService, private tokenStorageService: TokenStorageService) { }
   
   ngOnInit(): void {
-
     this.isLoggedIn = !!this.tokenStorageService.getToken();
     if (this.isLoggedIn) {
       const user = this.tokenStorageService.getUser();
@@ -35,6 +34,7 @@ export class CartComponent implements OnInit {
 
     //this.cartService.localStorageGetCart();
     this.getCartItems();
+    this.getTotalPrice();
   }
   removeFromCart(cartItem:CartItem){
     this.cartService.removeFromCart(cartItem.food.id);
@@ -43,6 +43,7 @@ export class CartComponent implements OnInit {
     this.cartItem=[];
     this.cart=[];
     this.cartService.localStorageClear();
+    this.totalValue = 0;
     console.log(this.cart.length);
   }
   checkout2():void{
@@ -53,6 +54,9 @@ export class CartComponent implements OnInit {
   changeQuantity(cartItem:CartItem,quantityInString:string){
     const quantity = parseInt(quantityInString);
     this.cartService.changeQuantity(cartItem.food.id, quantity);
+    this.getCartItems();
+    this.getTotalPrice();
+    console.log(this.totalValue);
   }
 
   checkout(): void{
@@ -93,6 +97,8 @@ export class CartComponent implements OnInit {
        totalPrice += (curr.food.price*curr.quantity);
      })
    }
-return totalPrice;
+   this.totalValue=totalPrice;
+   console.log(this.totalValue);
+//return totalPrice;
  }
 }
