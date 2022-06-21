@@ -72,4 +72,12 @@ button{
     button{
         font-size: 1.2rem;
     }
+    .board{
+        margin:0;
+        width:100%;
+        border:none;
+    }
+    input{
+        width: 60vw;
+    }
 }

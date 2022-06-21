@@ -32,6 +32,7 @@ input{
     border-top:none;
     border-right:none;
     border-bottom:1px solid #888F85;
+    text-align: center;
 }
 input:focus{
     box-shadow:none;
@@ -61,5 +62,10 @@ button:hover{
     }
     button{
         font-size: 1.7rem;
+    }
+    .board{
+        margin:0;
+        width:100%;
+        border:none;
     }
 }

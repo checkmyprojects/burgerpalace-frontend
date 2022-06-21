@@ -9,10 +9,10 @@
 .row{
     flex-direction: row;
 }
-.row img{
+/* .row img{
     height: 200px;
     width: auto;
-}
+} */
 .card{
     padding-top: 2.5vh;
     margin-top: 5vh;
@@ -41,7 +41,7 @@ input{
 }
 .btn:hover{
     background-color: #F91F2C;
-    border:#840f16
+    border:1px solid #840f16;
 }
 @media  only screen and (min-width : 768px) {
     .container{
