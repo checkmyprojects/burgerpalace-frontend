@@ -43,6 +43,7 @@ export class CartComponent implements OnInit {
     this.cartItem=[];
     this.cart=[];
     this.cartService.localStorageClear();
+    this.totalValue = 0;
     console.log(this.cart.length);
   }
   checkout2():void{
