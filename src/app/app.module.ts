@@ -19,6 +19,7 @@ import { LoginformComponent } from './loginform/loginform.component';
 import { CartComponent } from './cart/cart.component';
 import { authInterceptorProviders } from './_helpers/auth.interceptor';
 import { FixedmenuComponent } from './fixedmenu/fixedmenu.component';
+import { SandwichesComponent } from './sandwiches/sandwiches.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,8 @@ import { FixedmenuComponent } from './fixedmenu/fixedmenu.component';
     LoginComponent,
     LoginformComponent,
     CartComponent,
-    FixedmenuComponent
+    FixedmenuComponent,
+    SandwichesComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +47,8 @@ import { FixedmenuComponent } from './fixedmenu/fixedmenu.component';
       {path:'burgers', component:FoodComponent},
       {path:'signup', component:SignupComponent},
       {path:'login', component:LoginComponent},
-      {path:'cart', component:CartComponent}
+      {path:'cart', component:CartComponent},
+      {path:'sandwiches', component:SandwichesComponent}
     ])
   ],
   providers: [authInterceptorProviders],
