@@ -1,0 +1,16 @@
+<app-header></app-header>
+
+<div class="container">
+    <div class="row">
+        <div *ngFor="let food of foods" class="card text-center col-6" style="width: 18rem;">
+        <img class="card-img-top" src="{{food.img}}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{ food.name }}</h5>
+                <p class="card-text">{{food.price}}€</p>
+                <button class="btn btn-primary" (click)="addToCart(food)">Add to cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>
