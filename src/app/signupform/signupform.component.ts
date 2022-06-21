@@ -18,7 +18,8 @@ export class SignupformComponent implements OnInit {
     address: null, 
     username: null, 
     phone: null, 
-    password: null
+    password: null,
+    confirmPassword: null
   };
   isSuccessful = false;
   isSignUpFailed = false;
@@ -42,19 +43,28 @@ export class SignupformComponent implements OnInit {
   }
 
   onSubmit(): void {
-    const { name, address, username, phone, password } = this.form;
-    this.authService.register(name, address, username, phone, password).subscribe({
-      next: data => {
-        console.log(data);
-        this.isSuccessful = true;
-        this.isSignUpFailed = false;
-      },
-      error: err => {
-        this.errorMessage = err.error.message;
-        this.isSignUpFailed = true;
-      }
-    });
-    this.router.navigate(['/login']);
+    const { name, address, username, phone, password, confirmPassword } = this.form;
+    
+    if(password.length<6){
+      alert("Password must have 7 characters at least");
+    }else if (password!=confirmPassword){
+      alert("Passwords don't match");
+    }else if(password==confirmPassword && password.length>=6){
+    
+      this.authService.register(name, address, username, phone, password).subscribe({
+        next: data => {
+          console.log(data);
+          this.isSuccessful = true;
+          this.isSignUpFailed = false;
+        },
+        error: err => {
+          this.errorMessage = err.error.message;
+          this.isSignUpFailed = true;
+        }
+      });
+      this.router.navigate(['/login']);
+      
+    }
   }
 
   public createUser(data:NgForm): void{
