@@ -10,8 +10,8 @@
         </ul>
         
         <li class="nav-item">
-          <a class="nav-link active" href="/login" ><i class="fa-solid fa-circle-user"></i></a>
-          <a class="nav-link active" href="/home" ><i class="fa-solid fa-right-to-bracket"></i></a>
+          <a class="nav-link active" *ngIf="!isLoggedIn" href="/login" ><i class="fa-solid fa-circle-user"></i></a>
+          <a class="nav-link active" *ngIf="isLoggedIn" (click)="logout()" routerLink="/home"><i class="fa-solid fa-right-to-bracket"></i></a>
         </li>
         <li class="nav-item">
           
