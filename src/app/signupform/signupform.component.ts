@@ -31,7 +31,7 @@ export class SignupformComponent implements OnInit {
   public getUserData(data:NgForm):void{
 
     const user : User = {
-      name: data.value.name +" " +data.value.surname,
+      name: data.value.name,
       address: data.value.address,
       username: data.value.email,
       phone: data.value.phone,
@@ -59,7 +59,7 @@ export class SignupformComponent implements OnInit {
 
   public createUser(data:NgForm): void{
     const user : User = {
-      name: data.value.name +" " +data.value.surname,
+      name: data.value.name,
       address: data.value.address,
       username: data.value.email,
       phone: data.value.phone,
