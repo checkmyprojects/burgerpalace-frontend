@@ -1,18 +1,16 @@
 // Here we define the type of data that we have
 // the type of data we get from the backend
 
+import { Optional } from "@angular/core";
 import { Orders } from "./orders";
 
 export interface User{
-    id: number;
+    id?: number;
     name: string;
     address: string;
-    email: string;
+    username: string;
     phone: string;
     password: string;
-    role: string;
-    // order
-    order: Orders;
 }
 
 // private Long id;

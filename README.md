@@ -1,27 +1,41 @@
-# Burgerpalace Frontend
+# BurgerPalace 🚀
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
+This is our event management app. Admins can add/remove/edit events and users can subscribe/unsubscribe to attend them.
 
-## Development server
+**Link to project:** 
+FrontEnd: https://github.com/checkmyprojects/burgerpalace-frontend
+Backend: https://github.com/checkmyprojects/burgerpalace-backend
+## How It's Made:
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+**Tech used 🛠️:** Java, Spring, Angular 13, HTML, CSS, Typescript, Bootstrap, MySQL
 
-## Code scaffolding
+With Springboot to power our fullstack app, we made a responsive website for a restaurant that offers food online.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Our goal is to offer a way of eating at home delicious cooked meals without worrying about the process itself. We cook for you!
 
-## Build
+This was our first project using Angular and we are still learning how it works but we hope you like our project.
+This is a screenshot of our project:
+![Desktop Image](src/assets/img/readme/burgerpalace.png) 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+On this project we have worked with agile development through Scrum and Kanban. We've done four sprints, dividing our user stories on each week. We are well organized and have a nice time working together as a team.
+![Desktop Image](src/assets/img/readme/trello.png) 
 
-## Running unit tests
+## Team
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Hi there!
 
-## Running end-to-end tests
+We are a group of enthusiastic coders excited about web-designing. On our latest project we have created a web-page for an online food order service.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Iris: https://github.com/irisvilaseca Scrum Master/developer
+- Jesús: https://github.com/checkmyprojects Developer
+- Carlos: https://github.com/CarlitosHunter Product Owner/developer
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Lessons Learned:
+---
+
+Angular helps on developing dynamic websites while working on single components and separate features at the same time! It makes the developing process easier.
+We have used for the first time JWT on Angular to work on the security function (signup, login and authorizations).
+

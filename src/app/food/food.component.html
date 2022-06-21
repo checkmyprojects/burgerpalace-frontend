@@ -1,7 +1,34 @@
-<p>food works!</p>
+<app-header></app-header>
+
+<div class="container">
+    <div class="row">
+        <div *ngFor="let food of foods" class="card text-center col-6" style="width: 18rem;">
+        <img class="card-img-top" src="{{food.img}}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{ food.name }}</h5>
+                <p class="card-text">{{food.price}}€</p>
+                <button class="btn btn-primary" (click)="addToCart(food)">Add to cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>
+
+
+
+
+<!-- <p>food works!</p>
 <div *ngFor="let food of foods">
     <h3>{{ food.name }}</h3>
     <p>{{ food.ingredients }}</p>
     <p>{{ food.price }}€</p>
-    <p>{{ food.price }}€</p>
+    <img src="{{ food.img }}"/>
 </div>
+<div>
+    <h3>Name: {{ currentUser.username }}</h3>
+    <p>Address: {{ currentUser.address }}</p>
+    <p>Phone: {{ currentUser.phone }}€</p>
+    <p>Email: {{ currentUser.refresh_token }}</p>
+    
+</div> -->

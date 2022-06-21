@@ -1,0 +1,33 @@
+<header>
+    <div class="logo-container">
+        <img src="assets/img/logo.png" alt="logo" id="logo" class="center-block">
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light text-center" >
+        <a routerLink="/home"class="navbar-brand" href="#">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#" routerLink="/burgers">Burgers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" routerLink="/sandwiches">Sandwiches</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" routerLink="/drinks">Drinks</a>
+            </li>
+          </ul>
+        </div>
+        
+          <input *ngIf="!isLoggedIn" class="btn btn-primary" type="button" value="Login" routerLink="/login">
+          <input *ngIf="isLoggedIn" class="btn btn-primary" type="button" value="Logout" (click)="logout()" routerLink="/home">
+        
+        <!-- icono de carrito -->
+          <a href="/cart" class="img-carritopeque"><img src="assets/img/carrito.png"></a>
+        
+      </nav>  
+</header>
+
+<app-fixedmenu></app-fixedmenu>
