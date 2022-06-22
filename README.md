@@ -15,11 +15,17 @@ With Springboot to power our fullstack app, we made a responsive website for a r
 Our goal is to offer a way of eating at home delicious cooked meals without worrying about the process itself. We cook for you!
 
 This was our first project using Angular and we are still learning how it works but we hope you like our project.
-This is a screenshot of our project:
+### This is a screenshot of our project:
 ![Desktop Image](src/assets/img/readme/burgerpalace.png) 
+### Destop:
+
+![Desktop Image](src/assets/img/readme/animation-desktop.gif) 
+
+### Mobile
+![Desktop Image](src/assets/img/readme/animation-mobile.gif) 
 
 On this project we have worked with agile development through Scrum and Kanban. We've done four sprints, dividing our user stories on each week. We are well organized and have a nice time working together as a team.
-![Desktop Image](src/assets/img/readme/trello.png) 
+![Trello](src/assets/img/readme/trello.png) 
 
 ## Team
 ---
