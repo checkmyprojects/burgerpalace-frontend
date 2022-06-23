@@ -9,7 +9,15 @@ Backend: https://github.com/checkmyprojects/burgerpalace-backend
 ## How It's Made:
 ---
 
-**Tech used 🛠️:** Java, Spring, Angular 13, HTML, CSS, Typescript, Bootstrap, MySQL
+**Tech used 🛠️:** Java
+
+Spring:https://spring.io/
+Angular 13:https://angular.io/
+HTML:https://developer.mozilla.org/es/docs/Web/HTML
+CSS: https://www.w3schools.com/css/
+Typescript: https://www.typescriptlang.org/
+Bootstrap: https://getbootstrap.com/
+ MySQL: https://www.mysql.com/
 
 With Springboot to power our fullstack app, we made a responsive website for a restaurant that offers food online.
 
