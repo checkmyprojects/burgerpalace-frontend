@@ -4,6 +4,7 @@ This is our event management app. Admins can add/remove/edit events and users ca
 
 **Link to project:** 
 FrontEnd: https://github.com/checkmyprojects/burgerpalace-frontend
+
 Backend: https://github.com/checkmyprojects/burgerpalace-backend
 ## How It's Made:
 ---
@@ -17,7 +18,7 @@ Our goal is to offer a way of eating at home delicious cooked meals without worr
 This was our first project using Angular and we are still learning how it works but we hope you like our project.
 ### This is a screenshot of our project:
 ![Desktop Image](src/assets/img/readme/burgerpalace.png) 
-### Destop:
+### Desktop:
 
 ![Desktop Image](src/assets/img/readme/animation-desktop.gif) 
 
