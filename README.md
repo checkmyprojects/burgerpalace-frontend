@@ -1,6 +1,6 @@
 # BurgerPalace 🚀
 
-This is our event management app. Admins can add/remove/edit events and users can subscribe/unsubscribe to attend them.
+This is our food order service app. Users can sign up, login, add items to cart and make food orders online. Every order is stored on our database.
 
 **Link to project:** 
 FrontEnd: https://github.com/checkmyprojects/burgerpalace-frontend
