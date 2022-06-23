@@ -44,7 +44,11 @@ import { Food } from '../model/food';
         localStorage.setItem('BurgerPalaceCart',JSON.stringify(this.cart));
     }
     localStorageGetCart(){
-        if(JSON.parse(localStorage.getItem('BurgerPalaceCart')||'[]') === ''){
+        // if(JSON.parse(localStorage.getItem('BurgerPalaceCart')||'[]') === ''){
+        //     return;
+        // }
+        if(localStorage.getItem('BurgerPalaceCart') === null){
+            localStorage.setItem('BurgerPalaceCart',JSON.stringify(this.cart));
             return;
         }
         this.cart=JSON.parse(localStorage.getItem('BurgerPalaceCart')||'[]');
@@ -55,7 +59,8 @@ import { Food } from '../model/food';
     localStorageClear(){
         this.cart = new Cart();
         console.log(this.cart);
-        localStorage.setItem('BurgerPalaceCart',JSON.stringify(''));
+        localStorage.setItem('BurgerPalaceCart',JSON.stringify(this.cart));
+        // localStorage.setItem('BurgerPalaceCart',JSON.stringify(''));
         //localStorage.removeItem('BurgerPalaceCart');
     }
 
