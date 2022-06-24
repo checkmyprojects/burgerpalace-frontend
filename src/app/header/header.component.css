@@ -26,7 +26,9 @@ nav{
     align-self: flex-end;
     background-color: #19223B;
     border-radius: 30px;
-    padding: 1rem 2rem 1rem 2rem;
+    /* padding: 1rem 2rem 1rem 2rem; */
+    padding: .5rem 1rem;
+    font-size: 1.7rem;
 }
 .btn:hover{
     background-color: #405CAB;
@@ -68,7 +70,9 @@ app-fixedmenu{
     .btn {
         order: 3;
         border-radius: 24px;
-        padding: 1rem 1rem 1rem 1rem;
+        /* padding: 1rem 1rem 1rem 1rem; */
+        padding: .5rem 1rem;
+        font-size: 1.2rem;
 
 
     }

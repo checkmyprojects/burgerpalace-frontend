@@ -46,7 +46,8 @@ button{
     margin-right:auto;
     font-size: 1.7rem;
     border-radius: 30px;
-    padding: 1rem 2rem 1rem 2rem;
+    /* padding: 1rem 2rem 1rem 2rem; */
+    padding: .5rem 1rem;
 }
 #signup{
     background-color: #19223B;
@@ -79,5 +80,8 @@ button{
     }
     input{
         width: 60vw;
+    }
+    .noAccountText{
+        margin-top: 2rem;
     }
 }
